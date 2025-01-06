@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escreve na Tela</title>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('Qual seu nome ?');
+        var salario = Number(window.prompt('Qual o seu salario ?'));
+        document.write(`Seu nome tem ${nome.length} letras. `);
+        document.write(`Seu nome maiusculo ${nome.toUpperCase()} e seu nome minusculo ${nome.toLowerCase()} <br>`);
+        document.write(`Seu salario é ${salario.toLocaleString('pt-BR', {   style: 'currency', currency: 'BRL' })}`);
+    </script>
+</body>
+</html>

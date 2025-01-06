@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando e estudando DOM</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color: rgba(0, 153, 255, 0.986);
+        }
+        p{
+            color: rgb(244, 245, 243);
+        }
+        #bloco{
+            font-size: 50px;
+            background-color: green;
+            width: 200px;;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testando e estudando DOM</h1>
+    <p>Alguma coisa</p>
+    <p>Aprendendo a utilizar o DOM em JavaScript</p>
+    <p id="peixe">clique aqui</p>
+    <h2>Bloco Interativo</h2>
+    <div id="bloco" >
+        <p>
+            Click
+        </p>
+    </div>
+
+    <script>
+        ///////////////////////////////////////////////////////
+           var paragrafos = window.document.getElementsByTagName('p')[1];
+
+            window.document.write(paragrafos.innerText + ' ');
+            var agua = window.document.getElementById('peixe');
+            window.document.write( agua.innerText );
+///////////////////////////////////////////////////////////////////
+
+
+        var quadrado = window.document.getElementById('bloco')
+        quadrado.addEventListener('click', clicar)
+        quadrado.addEventListener('mouseenter', entrar)
+        quadrado.addEventListener('mouseout', sair)
+
+     
+      function clicar(){
+        quadrado.innerText = 'Clicou'
+        quadrado.style.background = 'white'
+      }
+      function entrar(){
+        quadrado.innerText = 'Entrou'
+      }
+      function sair(){
+        quadrado.innerText = 'saiu'
+      }
+
+    
+
+    </script>
+</body>
+</html>
