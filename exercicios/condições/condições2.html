@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual país você é ?</title>
+</head>
+<body>
+    <h1>Qual o seu país ?</h1>
+    <p>digite seu país: <input type="text" name="pais" id="local"></p>
+    <input type="button" value="Verificar" onclick="origem()">
+    <div id="mensagen">
+
+    </div>
+
+    <script>
+        var pais = window.document.getElementById('local')
+        var men = window.document.getElementById('mensagen')
+        
+        function origem(){
+            var nacionalidade = pais.value.toLowerCase()
+            
+            if(nacionalidade === 'brasil'){
+                men.innerHTML += '<p>Você é  brasileiro, seja bem vindo</p>'
+            }
+            else{
+                men.innerHTML += '<p>Você é estrangeiro, seja bem vindo</p>'
+            }
+
+        }
+    </script>
+    
+</body>
+</html>
