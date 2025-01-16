@@ -1,28 +1,42 @@
-function contar(){
-    var Pinicio = document.getElementById('inicio')
-    var Pfim = document.getElementById('fim')
-    var Ppasso = document.getElementById('passo')
-    var contagem = document.getElementById('contagem')
-//////////////////////
-    var inicio = Number(Pinicio.value)
-    var fim = Number(Pfim.value)
-    var passo = Number(Ppasso.value)
-    var resultado = ''
-    var resElement = document.getElementById('antes-da-contagem')
+function contar() {
+    var Pinicio = document.getElementById('inicio');
+    var Pfim = document.getElementById('fim');
+    var Ppasso = document.getElementById('passo');
+    var contagem = document.getElementById('contagem');
+    var resultado = '';
+    var resElement = document.getElementById('antes-da-contagem');
 
-    if(passo <= 0 || fim<=0){
-        window.alert("Valor invalido")
-        return
-    }
-    else{
-    resElement.innerText = 'Contando:'
+    // Obter valores de entrada
+    var inicio = Number(Pinicio.value);
+    var fim = Number(Pfim.value);
+    var passo = Number(Ppasso.value);
 
-    while (inicio <= fim){
-        resultado+=inicio+ ','
-        inicio+=passo
-        contagem.innerText = resultado
+    // Verificar se os valores são válidos
+    if (passo <= 0) {
+        window.alert("O valor do passo deve ser maior que 0.");
+        return;
     }
-    resultado = resultado.slice(0,-1)
-    document.getElementById('contagem').innerText = resultado
-}
+    
+    if (inicio == "" || fim == "" || passo == "") {
+        window.alert("Por favor, preencha todos os campos.");
+        return;
+    }
+
+    //crescente
+    if (inicio <= fim) {
+        resElement.innerText = 'Contando:';
+        while (inicio <= fim) {
+            resultado += inicio + ', ';
+            inicio += passo;
+        }
+    } else { 
+        //decrescente
+        resElement.innerText = 'Contando:';
+        while (inicio >= fim) {
+            resultado += inicio + ', ';
+            inicio -= passo;
+        }
+    }
+    resultado = resultado.slice(0, -2);
+    contagem.innerText = resultado;
 }
