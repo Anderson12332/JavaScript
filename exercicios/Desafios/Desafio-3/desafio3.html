@@ -12,18 +12,23 @@
     </header>
     <section>
         <div id="text">
-            <p>Ano de Nascimento <input id="textano" type="number" max="2025" min="1900"></p>
-            <p>Sexo: <input type="radio" name="sexo" id="isexoH"><label for="isexoH">Masculino</label>
-            <input type="radio" name="sexo" id="isexoM"><label for="isexoM">Feminino</label></p>
-            <input type="button" value="Verificar" onclick="verificar()">
+            <p>
+               <label for="Inicio">Inicio</label> <input type="number" id="inicio"> <br>
+                <label for="fim">Fim</label> <input type="number" id="fim"> <br>
+                <label for="passo">Passo</label> <input type="number" id="passo"> <br>
+            </p>
+            <input type="button" value="contar" onclick="contar()">
+            
         </div>
         <div id="res">
-            
+            <p id="antes-da-contagem">preparando a contagem......</p>
+            <p id="contagem"></p>
         </div>
 
     </section>
     <footer>
         <p>Site feito por Anderson para o Curso Em Video</p>
+        
 
     </footer>
   <script src="script.js"></script>

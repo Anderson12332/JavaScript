@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 body{
-    background-color: rgb(161, 119, 41);
+    background-color: rgb(55, 161, 41);
 }
 header{
     color: white;
@@ -16,13 +16,9 @@ section{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.548);
 
 }
-
-section>div>img{
-    width: 250px;
-    margin: 10px;
-    margin-left:120px;
+input[type="number"] {
+    margin: 5px;
 }
-
 footer{
     color: white;
     text-align: center;
@@ -32,4 +28,5 @@ footer{
     section{
         width: 80vw;
     }
+    
 }
