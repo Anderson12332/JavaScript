@@ -2,7 +2,7 @@ var nume =[]
 
 
 function adicionar(){
-    var qn = document.getElementById('inumero')
+var qn = document.getElementById('inumero')
 var ad = document.getElementById('ivalores')
 var n = Number(qn.value)
 var item = document.createElement('option')
@@ -44,9 +44,9 @@ function analise(){
 
         res.innerHTML = `<p>Ao todo, temos ${nume.length} números cadastrados</p>`
         res.innerHTML += `<p>O maior valor é ${Math.max(...nume)}</p>`
-        res.innerHTML += `<p>O maior valor é ${Math.min(...nume)}</p>`
+        res.innerHTML += `<p>O menor valor é ${Math.min(...nume)}</p>`
         res.innerHTML += `<p>A soma de todos os valores é ${soma}`
-        res.innerHTML += `<p>A dos valores adicionados é ${media}`
+        res.innerHTML += `<p>A media dos valores adicionados é ${media}`
 }}
 function apagarTudo(){
     var ad = document.getElementById('ivalores');
